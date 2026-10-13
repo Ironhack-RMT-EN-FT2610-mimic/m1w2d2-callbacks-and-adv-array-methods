@@ -31,3 +31,25 @@ let allNames = people.reduce((acc, person) => {
 }, "")
 
 console.log(allNames)
+
+
+// activity solution:
+
+const calAvgCalories = (arr) => {
+  
+  if (arr.length === 0) {
+    return null
+  }
+   
+  let total = arr.reduce((acc, elem) => {
+      return acc + elem.calories
+  }, 0)
+  
+  // let avg = total / arr.length
+  // let twoDigit = avg.toFixed(2)
+  // let twoDigitNum = parseFloat(twoDigit)
+  // return twoDigitNum
+
+  return parseFloat((total / arr.length).toFixed(2))
+
+}
